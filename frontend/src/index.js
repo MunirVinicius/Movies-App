@@ -9,9 +9,6 @@ class Main extends React.Component {
     return (
       <div>
         <SearchMovie></SearchMovie>
-        <div className="container">
-          <h1 className="title">Movie Search</h1>
-        </div>
       </div>
     );
   }
