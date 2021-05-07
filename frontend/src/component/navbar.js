@@ -12,7 +12,6 @@ export default function SearchMovie(){
 
     const searchMovies = async (e) => {
         e.preventDefault();
-        console.log("submitting");
         const url = `https://api.themoviedb.org/3/search/movie?api_key=ba8df5d748042694adc8366a5f6d3f39&language=en-US&query=${query}&page=1&include_adult=false`;
 
         try{
@@ -46,10 +45,9 @@ export default function SearchMovie(){
             </div>
             <div className="cards">
             {movies.filter(movie => movie.poster_path).map(movie => (
-                   <Card movie={movie} />
+                   <Card movie={movie} key={movie.id} />
             ))}
             </div>        
         </div>
-
     )
 }
